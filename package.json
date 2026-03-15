@@ -3,213 +3,74 @@
     "name": "@jcbhmr/legacy-text-encoder",
     "version": "1.0.0",
     "description": "🔎 A TextEncoder and TextEncoderStream that supports the legacy (non-UTF-8) encodings",
-    "author": {
-        "email": "jcbhmr@outlook.com",
-        "name": "Jacob Hummer",
-        "url": "https://jcbhmr.com"
-    },
+    "author": "Jacob Hummer <jcbhmr@outlook.com> (https://jcbhmr.com/)",
     "bugs": {
-        "email": "jcbhmr@outlook.com",
         "url": "https://github.com/jcbhmr/legacy-text-encoder/issues"
     },
     "devDependencies": {
-        "@tsconfig/bases": "^1.0.23",
-        "@types/node": "^24",
-        "cross-env": "^10.1.0",
-        "oxfmt": "^0.40.0",
-        "oxlint": "^1.55.0",
-        "publint": "^0.3.18",
+        "@types/node": "latest",
+        "@typescript/native-preview": "latest",
         "type-fest": "^5.4.4",
-        "typescript": "^6.0.1-rc"
+        "vite-plus": "latest"
+    },
+    "overrides": {
+      "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+      "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
     },
     "devEngines": {
         "packageManager": {
-            "name": "npm",
-            "version": ">=11"
+            "name": "pnpm",
+            "version": "latest"
         },
         "runtime": {
             "name": "node",
-            "version": ">=24"
+            "version": "latest"
         }
     },
     "engines": {
         "node": "^20 || ^22 || ^24 || >=25"
     },
-    "imports": {
-        "#utf-16le": {
-            "development:@jcbhmr/legacy-text-encoder": {
-                "node": "./src/utf-16le.node.ts",
-                "default": "./src/utf-16le.default.ts"
-            },
-            "node": "./dist/utf-16le.node.js",
-            "default": "./dist/utf-16le.default.js"
-        }
-    },
     "exports": {
-        ".": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/index.ts",
-            "default": "./dist/index.js"
-        },
-        "./full": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/full.ts",
-            "default": "./dist/full.js"
-        },
-        "./ibm866": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/ibm866.ts",
-            "default": "./dist/ibm866.js"
-        },
-        "./iso-8859-2": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/iso-8859-2.ts",
-            "default": "./dist/iso-8859-2.js"
-        },
-        "./iso-8859-3": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/iso-8859-3.ts",
-            "default": "./dist/iso-8859-3.js"
-        },
-        "./iso-8859-4": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/iso-8859-4.ts",
-            "default": "./dist/iso-8859-4.js"
-        },
-        "./iso-8859-5": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/iso-8859-5.ts",
-            "default": "./dist/iso-8859-5.js"
-        },
-        "./iso-8859-6": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/iso-8859-6.ts",
-            "default": "./dist/iso-8859-6.js"
-        },
-        "./iso-8859-7": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/iso-8859-7.ts",
-            "default": "./dist/iso-8859-7.js"
-        },
-        "./iso-8859-8": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/iso-8859-8.ts",
-            "default": "./dist/iso-8859-8.js"
-        },
-        "./iso-8859-8-i": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/iso-8859-8-i.ts",
-            "default": "./dist/iso-8859-8-i.js"
-        },
-        "./iso-8859-10": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/iso-8859-10.ts",
-            "default": "./dist/iso-8859-10.js"
-        },
-        "./iso-8859-13": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/iso-8859-13.ts",
-            "default": "./dist/iso-8859-13.js"
-        },
-        "./iso-8859-14": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/iso-8859-14.ts",
-            "default": "./dist/iso-8859-14.js"
-        },
-        "./iso-8859-15": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/iso-8859-15.ts",
-            "default": "./dist/iso-8859-15.js"
-        },
-        "./iso-8859-16": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/iso-8859-16.ts",
-            "default": "./dist/iso-8859-16.js"
-        },
-        "./koi8-r": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/koi8-r.ts",
-            "default": "./dist/koi8-r.js"
-        },
-        "./koi8-u": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/koi8-u.ts",
-            "default": "./dist/koi8-u.js"
-        },
-        "./macintosh": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/macintosh.ts",
-            "default": "./dist/macintosh.js"
-        },
-        "./windows-874": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/windows-874.ts",
-            "default": "./dist/windows-874.js"
-        },
-        "./windows-1250": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/windows-1250.ts",
-            "default": "./dist/windows-1250.js"
-        },
-        "./windows-1251": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/windows-1251.ts",
-            "default": "./dist/windows-1251.js"
-        },
-        "./windows-1252": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/windows-1252.ts",
-            "default": "./dist/windows-1252.js"
-        },
-        "./windows-1253": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/windows-1253.ts",
-            "default": "./dist/windows-1253.js"
-        },
-        "./windows-1254": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/windows-1254.ts",
-            "default": "./dist/windows-1254.js"
-        },
-        "./windows-1255": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/windows-1255.ts",
-            "default": "./dist/windows-1255.js"
-        },
-        "./windows-1256": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/windows-1256.ts",
-            "default": "./dist/windows-1256.js"
-        },
-        "./windows-1257": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/windows-1257.ts",
-            "default": "./dist/windows-1257.js"
-        },
-        "./windows-1258": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/windows-1258.ts",
-            "default": "./dist/windows-1258.js"
-        },
-        "./x-mac-cyrillic": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/x-mac-cyrillic.ts",
-            "default": "./dist/x-mac-cyrillic.js"
-        },
-        "./gbk": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/gbk.ts",
-            "default": "./dist/gbk.js"
-        },
-        "./gb18030": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/gb18030.ts",
-            "default": "./dist/gb18030.js"
-        },
-        "./big5": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/big5.ts",
-            "default": "./dist/big5.js"
-        },
-        "./euc-jp": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/euc-jp.ts",
-            "default": "./dist/euc-jp.js"
-        },
-        "./iso-2022-jp": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/iso-2022-jp.ts",
-            "default": "./dist/iso-2022-jp.js"
-        },
-        "./shift_jis": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/shift_jis.ts",
-            "default": "./dist/shift_jis.js"
-        },
-        "./euc-kr": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/euc-kr.ts",
-            "default": "./dist/euc-kr.js"
-        },
-        "./utf-16be": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/utf-16be.ts",
-            "default": "./dist/utf-16be.js"
-        },
-        "./utf-16le": {
-            "development:@jcbhmr/legacy-text-encoder": {
-                "node": "./src/utf-16le.node.ts",
-                "default": "./src/utf-16le.default.ts"
-            },
-            "node": "./dist/utf-16le.node.js",
-            "default": "./dist/utf-16le.default.js"
-        },
-        "./x-user-defined": {
-            "development:@jcbhmr/legacy-text-encoder": "./src/x-user-defined.ts",
-            "default": "./dist/x-user-defined.js"
-        }
+        ".": "./dist/index.js",
+        "./mini": "./dist/mini.js",
+        "./ibm866": "./dist/ibm866.js",
+        "./iso-8859-2": "./dist/iso-8859-2.js",
+        "./iso-8859-3": "./dist/iso-8859-3.js",
+        "./iso-8859-4": "./dist/iso-8859-4.js",
+        "./iso-8859-5": "./dist/iso-8859-5.js",
+        "./iso-8859-6": "./dist/iso-8859-6.js",
+        "./iso-8859-7": "./dist/iso-8859-7.js",
+        "./iso-8859-8": "./dist/iso-8859-8.js",
+        "./iso-8859-8-i": "./dist/iso-8859-8-i.js",
+        "./iso-8859-10": "./dist/iso-8859-10.js",
+        "./iso-8859-13": "./dist/iso-8859-13.js",
+        "./iso-8859-14": "./dist/iso-8859-14.js",
+        "./iso-8859-15": "./dist/iso-8859-15.js",
+        "./iso-8859-16": "./dist/iso-8859-16.js",
+        "./koi8-r": "./dist/koi8-r.js",
+        "./koi8-u": "./dist/koi8-u.js",
+        "./macintosh": "./dist/macintosh.js",
+        "./windows-874": "./dist/windows-874.js",
+        "./windows-1250": "./dist/windows-1250.js",
+        "./windows-1251": "./dist/windows-1251.js",
+        "./windows-1252": "./dist/windows-1252.js",
+        "./windows-1253": "./dist/windows-1253.js",
+        "./windows-1254": "./dist/windows-1254.js",
+        "./windows-1255": "./dist/windows-1255.js",
+        "./windows-1256": "./dist/windows-1256.js",
+        "./windows-1257": "./dist/windows-1257.js",
+        "./windows-1258": "./dist/windows-1258.js",
+        "./x-mac-cyrillic": "./dist/x-mac-cyrillic.js",
+        "./gbk": "./dist/gbk.js",
+        "./gb18030": "./dist/gb18030.js",
+        "./big5": "./dist/big5.js",
+        "./euc-jp": "./dist/euc-jp.js",
+        "./iso-2022-jp": "./dist/iso-2022-jp.js",
+        "./shift_jis": "./dist/shift_jis.js",
+        "./euc-kr": "./dist/euc-kr.js",
+        "./utf-16be": "./dist/utf-16be.js",
+        "./utf-16le": "./dist/utf-16le.js",
+        "./x-user-defined": "./dist/x-user-defined.js"
     },
     "files": [
         "dist/"
@@ -227,13 +88,11 @@
         "url": "git+https://github.com/jcbhmr/legacy-text-encoder.git"
     },
     "scripts": {
-        "xprepare": "npm run build",
-        "build": "tsc --noCheck",
-        "test": "cross-env NODE_OPTIONS=--conditions=development:@jcbhmr/legacy-text-encoder node --test",
-        "dev": "cross-env NODE_OPTIONS=--conditions=development:@jcbhmr/legacy-text-encoder node --test --watch",
-        "lint": "oxlint",
-        "format": "oxfmt",
-        "check": "tsc --noEmit"
+        "dev": "vp pack --watch",
+        "test": "vp test",
+        "typecheck": "tsgo --noEmit",
+        "prepublishOnly": "pnpm run build",
+        "prepare": "vp config"
     },
     "types": "./dist/index.d.ts"
 }
