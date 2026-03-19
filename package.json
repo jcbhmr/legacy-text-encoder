@@ -1,98 +1,89 @@
 {
-    "type": "module",
-    "name": "@jcbhmr/legacy-text-encoder",
-    "version": "1.0.0",
-    "description": "🔎 A TextEncoder and TextEncoderStream that supports the legacy (non-UTF-8) encodings",
-    "author": "Jacob Hummer <jcbhmr@outlook.com> (https://jcbhmr.com/)",
-    "bugs": {
-        "url": "https://github.com/jcbhmr/legacy-text-encoder/issues"
-    },
-    "devDependencies": {
-        "@types/node": "latest",
-        "@typescript/native-preview": "latest",
-        "type-fest": "^5.4.4",
-        "vite-plus": "latest"
-    },
-    "overrides": {
-      "vite": "npm:@voidzero-dev/vite-plus-core@latest",
-      "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
-    },
-    "devEngines": {
-        "packageManager": {
-            "name": "pnpm",
-            "version": "latest"
-        },
-        "runtime": {
-            "name": "node",
-            "version": "latest"
-        }
-    },
-    "engines": {
-        "node": "^20 || ^22 || ^24 || >=25"
-    },
-    "exports": {
-        ".": "./dist/index.js",
-        "./mini": "./dist/mini.js",
-        "./ibm866": "./dist/ibm866.js",
-        "./iso-8859-2": "./dist/iso-8859-2.js",
-        "./iso-8859-3": "./dist/iso-8859-3.js",
-        "./iso-8859-4": "./dist/iso-8859-4.js",
-        "./iso-8859-5": "./dist/iso-8859-5.js",
-        "./iso-8859-6": "./dist/iso-8859-6.js",
-        "./iso-8859-7": "./dist/iso-8859-7.js",
-        "./iso-8859-8": "./dist/iso-8859-8.js",
-        "./iso-8859-8-i": "./dist/iso-8859-8-i.js",
-        "./iso-8859-10": "./dist/iso-8859-10.js",
-        "./iso-8859-13": "./dist/iso-8859-13.js",
-        "./iso-8859-14": "./dist/iso-8859-14.js",
-        "./iso-8859-15": "./dist/iso-8859-15.js",
-        "./iso-8859-16": "./dist/iso-8859-16.js",
-        "./koi8-r": "./dist/koi8-r.js",
-        "./koi8-u": "./dist/koi8-u.js",
-        "./macintosh": "./dist/macintosh.js",
-        "./windows-874": "./dist/windows-874.js",
-        "./windows-1250": "./dist/windows-1250.js",
-        "./windows-1251": "./dist/windows-1251.js",
-        "./windows-1252": "./dist/windows-1252.js",
-        "./windows-1253": "./dist/windows-1253.js",
-        "./windows-1254": "./dist/windows-1254.js",
-        "./windows-1255": "./dist/windows-1255.js",
-        "./windows-1256": "./dist/windows-1256.js",
-        "./windows-1257": "./dist/windows-1257.js",
-        "./windows-1258": "./dist/windows-1258.js",
-        "./x-mac-cyrillic": "./dist/x-mac-cyrillic.js",
-        "./gbk": "./dist/gbk.js",
-        "./gb18030": "./dist/gb18030.js",
-        "./big5": "./dist/big5.js",
-        "./euc-jp": "./dist/euc-jp.js",
-        "./iso-2022-jp": "./dist/iso-2022-jp.js",
-        "./shift_jis": "./dist/shift_jis.js",
-        "./euc-kr": "./dist/euc-kr.js",
-        "./utf-16be": "./dist/utf-16be.js",
-        "./utf-16le": "./dist/utf-16le.js",
-        "./x-user-defined": "./dist/x-user-defined.js"
-    },
-    "files": [
-        "dist/"
-    ],
-    "homepage": "https://github.com/jcbhmr/legacy-text-encoder#readme",
-    "keywords": [
-        "textencoder",
-        "encoding",
-        "ascii",
-        "utf16"
-    ],
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jcbhmr/legacy-text-encoder.git"
-    },
-    "scripts": {
-        "dev": "vp pack --watch",
-        "test": "vp test",
-        "typecheck": "tsgo --noEmit",
-        "prepublishOnly": "pnpm run build",
-        "prepare": "vp config"
-    },
-    "types": "./dist/index.d.ts"
+  "name": "@jcbhmr/legacy-text-encoder",
+  "version": "1.0.0",
+  "description": "🔎 A TextEncoder and TextEncoderStream that supports the legacy (non-UTF-8) encodings",
+  "keywords": [
+    "ascii",
+    "encoding",
+    "textencoder",
+    "utf16"
+  ],
+  "homepage": "https://github.com/jcbhmr/legacy-text-encoder#readme",
+  "bugs": {
+    "url": "https://github.com/jcbhmr/legacy-text-encoder/issues"
+  },
+  "license": "MIT",
+  "author": "Jacob Hummer <jcbhmr@outlook.com> (https://jcbhmr.com/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcbhmr/legacy-text-encoder.git"
+  },
+  "files": [
+    "dist/"
+  ],
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./mini": "./dist/mini.js",
+    "./ibm866": "./dist/ibm866.js",
+    "./iso-8859-2": "./dist/iso-8859-2.js",
+    "./iso-8859-3": "./dist/iso-8859-3.js",
+    "./iso-8859-4": "./dist/iso-8859-4.js",
+    "./iso-8859-5": "./dist/iso-8859-5.js",
+    "./iso-8859-6": "./dist/iso-8859-6.js",
+    "./iso-8859-7": "./dist/iso-8859-7.js",
+    "./iso-8859-8": "./dist/iso-8859-8.js",
+    "./iso-8859-8-i": "./dist/iso-8859-8-i.js",
+    "./iso-8859-10": "./dist/iso-8859-10.js",
+    "./iso-8859-13": "./dist/iso-8859-13.js",
+    "./iso-8859-14": "./dist/iso-8859-14.js",
+    "./iso-8859-15": "./dist/iso-8859-15.js",
+    "./iso-8859-16": "./dist/iso-8859-16.js",
+    "./koi8-r": "./dist/koi8-r.js",
+    "./koi8-u": "./dist/koi8-u.js",
+    "./macintosh": "./dist/macintosh.js",
+    "./windows-874": "./dist/windows-874.js",
+    "./windows-1250": "./dist/windows-1250.js",
+    "./windows-1251": "./dist/windows-1251.js",
+    "./windows-1252": "./dist/windows-1252.js",
+    "./windows-1253": "./dist/windows-1253.js",
+    "./windows-1254": "./dist/windows-1254.js",
+    "./windows-1255": "./dist/windows-1255.js",
+    "./windows-1256": "./dist/windows-1256.js",
+    "./windows-1257": "./dist/windows-1257.js",
+    "./windows-1258": "./dist/windows-1258.js",
+    "./x-mac-cyrillic": "./dist/x-mac-cyrillic.js",
+    "./gbk": "./dist/gbk.js",
+    "./gb18030": "./dist/gb18030.js",
+    "./big5": "./dist/big5.js",
+    "./euc-jp": "./dist/euc-jp.js",
+    "./iso-2022-jp": "./dist/iso-2022-jp.js",
+    "./shift_jis": "./dist/shift_jis.js",
+    "./euc-kr": "./dist/euc-kr.js",
+    "./utf-16be": "./dist/utf-16be.js",
+    "./utf-16le": "./dist/utf-16le.js",
+    "./x-user-defined": "./dist/x-user-defined.js"
+  },
+  "scripts": {
+    "dev": "vp pack --watch",
+    "test": "vp test",
+    "typecheck": "tsgo --noEmit",
+    "prepublishOnly": "pnpm run build",
+    "prepare": "vp config"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@typescript/native-preview": "latest",
+    "type-fest": "^5.4.4",
+    "vite-plus": "latest"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+    "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+  },
+  "engines": {
+    "node": "^20 || ^22 || ^24 || >=25"
+  },
+  "packageManager": "pnpm@10.32.1"
 }

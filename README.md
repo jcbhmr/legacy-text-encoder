@@ -10,6 +10,8 @@ npm install @jcbhmr/legacy-text-encoder
 
 ## Usage
 
+This package exposes 
+
 ```js
 import { LegacyTextEncoder } from "@jcbhmr/legacy-text-encoder";
 
@@ -40,9 +42,4 @@ await ReadableStream.from(["Hi", "!"])
 
 ## Development
 
-This package uses Deno for development as its JavaScript toolchain. The package
-is **not published to [JSR](https://jsr.io/)**. The package is instead packaged
-and published to [npm](https://www.npmjs.com/) using a custom build & publish
-script.
-
-You can get started by running `deno task test`.
+This project uses the [Vite+](https://viteplus.dev/) toolchain & tools ecosystem.

@@ -47,16 +47,16 @@
  */
 void 0;
 
-import { registerEncoding } from "./encodings.ts"
-import * as gbk from "./gbk.ts"
-import * as gb18030 from "./gb18030.ts"
-import * as big5 from "./big5.ts"
-import * as euc_jp from "./euc_jp.ts"
-import * as iso_2022_jp from "./iso_222_jp.ts"
-import * as shift_jis from "./shift_jis.ts"
-import * as euc_kr from "./euc_kr.ts"
-import * as single_byte from "./single_byte/mod.ts"
-import * as utf16 from "./utf16.ts"
-import * as x_user_defined from "./x_user_defined.ts"
+import { registerEncoding } from "./encodings.ts";
+import * as gbk from "./gbk.ts";
+import * as gb18030 from "./gb18030.ts";
+import * as big5 from "./big5.ts";
+import * as euc_jp from "./euc_jp.ts";
+import * as iso_2022_jp from "./iso_222_jp.ts";
+import * as shift_jis from "./shift_jis.ts";
+import * as euc_kr from "./euc_kr.ts";
+import * as single_byte from "./single_byte/mod.ts";
+import * as utf16 from "./utf16.ts";
+import * as x_user_defined from "./x_user_defined.ts";
 
-export { LegacyTextEncoder, LegacyTextEncoderStream } from "./api.ts"
+export { LegacyTextEncoder, LegacyTextEncoderStream } from "./api.ts";

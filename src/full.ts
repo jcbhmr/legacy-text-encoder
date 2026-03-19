@@ -33,8 +33,8 @@ import "./euc-jp.ts";
 import "./iso-2022-jp.ts";
 import "./shift_jis.ts";
 import "./euc-kr.ts";
-import "./utf-16be.ts"
-import "#utf-16le"
-import "./x-user-defined.ts"
+import "./utf-16be.ts";
+import "#utf-16le";
+import "./x-user-defined.ts";
 
-export * from "./index.ts"
+export * from "./index.ts";
