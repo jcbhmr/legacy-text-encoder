@@ -3,6 +3,7 @@ set -Eeuo pipefail
 
 # https://github.com/TheJaredWilcurt/blog/discussions/40
 # https://github.com/TheJaredWilcurt/blog/discussions/41
+mkdir -p ~/.proto
 cat <<'EOF' > ~/.proto/.prototools
 [settings]
 telemetry = false
