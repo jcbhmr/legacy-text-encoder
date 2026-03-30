@@ -56,18 +56,21 @@
     "build": "tsdown",
     "prepare": "node --run build",
     "test": "vitest run",
-    "bench": "vitest bench --run",
+    "bench": "node ./vite-run-bench.ts",
     "dev": "tsdown --watch"
   },
   "devDependencies": {
+    "@mitata/counters": "^0.0.8",
     "@types/node": "^25.5.0",
     "@typescript/native-preview": "^7.0.0-dev.20260326.1",
+    "mitata": "^1.0.34",
     "oxfmt": "^0.42.0",
     "oxlint": "^1.57.0",
     "oxlint-tsgolint": "^0.17.4",
     "publint": "^0.3.18",
     "tsdown": "^0.21.5",
     "type-fest": "^5.5.0",
+    "unplugin-macros": "^0.19.1",
     "vite": "^8.0.3",
     "vitest": "^4.1.2"
   },
@@ -80,5 +83,10 @@
       "name": "node",
       "version": "^25.8.2"
     }
+  },
+  "engines": {
+    "node": "20 || 22 || 24 || >=25",
+    "deno": "~2.5 || >=2.7",
+    "bun": ">=1.3"
   }
 }

@@ -45,6 +45,8 @@ export default class ImmediateReadableIOQueueScalarValue implements IterableIter
 
 if (import.meta.vitest) {
   const { test, expect } = await import("vitest");
+  const { run, bench, boxplot, summary } = await import("mitata");
+  type k_state = import("mitata").k_state;
 
   test("'Hello, Alan Turing' reads back", () => {
     const input = "Hello, Alan Turing";
@@ -54,7 +56,7 @@ if (import.meta.vitest) {
     expect(actual).toEqual(expected);
   });
 
-  test("Restoring works", () => {
+  test("restoring works", () => {
     const queue = ImmediateReadableIOQueueScalarValue.fromString("A");
     expect(queue.next()).toMatchObject({ value: "A".codePointAt(0)!, done: false });
     queue.restore("A".codePointAt(0)! as ScalarValue);
@@ -62,5 +64,20 @@ if (import.meta.vitest) {
     queue.restore("A".codePointAt(0)! as ScalarValue);
     expect(queue.next()).toMatchObject({ value: "A".codePointAt(0)!, done: false });
     expect(queue.next()).toMatchObject({ done: true });
+  });
+
+  test("bench", async () => {
+    bench("fibonacci(40)", () => fibonacci(40));
+
+    boxplot(() => {
+      summary(() => {
+        bench("Array.from($size)", function* (state: k_state) {
+          const size = state.get("size");
+          yield () => Array.from({ length: size });
+        }).range("size", 1, 1024);
+      });
+    });
+
+    await run();
   });
 }

@@ -42,4 +42,8 @@ await ReadableStream.from(["Hi", "!"])
 
 ## Development
 
-This project uses the [Vite+](https://viteplus.dev/) toolchain & tools ecosystem.
+```js
+using scalarValues = source[Symbol.iterator]();
+const bytes = Uint8Array.from(source.flatMap(encoding.createEncoder()));
+```
+
